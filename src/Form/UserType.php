@@ -2,7 +2,7 @@
 
 /* este formulario ha sido generado con el comando php bin/console make:form. En la línea de comandos, el framework te pide: 
      - el nombre del formulario (por convención, los formularios termina en styles
-     - la entidad a la cual vas arelacionarlo : vincula los datos del formulario con la entidad
+     - la entidad a la cual vas arelacionarlo : vincula los datos del formulario con la entidad. De hecho, crea el formulario con los mismos datos de la entidad. Después, es cosa nuestra ajustar.
      - crea la carpeta form y guarda dentro el fichero userType
  */
 namespace App\Form;
@@ -21,9 +21,9 @@ class UserType extends AbstractType         // Esta clase, UserType, extiende Ab
 $builder                                                                          // En este método, se utilizan métodos encadenados en el $builder para agregar los campos del formulario. Estos campos son:
     {                                                                             // El método ->add('email', EmailType::class) es parte de la construcción de un formulario utilizando Symfony en PHP. Permite agregar un campo de entrada de correo electrónico al formulario.
         ->add('email', EmailType::class)                                          // 'email': Un campo de tipo EmailType, que se utiliza para capturar direcciones de correo electrónico.
-            ->add('password', PasswordType::class)                                // 'password': Un campo de tipo PasswordType, que se utiliza para capturar contraseñas.
+        ->add('password', PasswordType::class)                                    // 'password': Un campo de tipo PasswordType, que se utiliza para capturar contraseñas.
         ->add('nombre')                                                           // 'nombre': Un campo simple sin tipo específico, que se utilizará para capturar el nombre del usuario. 
-            ->add('Registrar', SubmitType::class)
+        ->add('Registrar', SubmitType::class)                                     // 'Registrar': Un botón de tipo SubmitType, que se utiliza para enviar el formulario. 
         ;
     }
 
