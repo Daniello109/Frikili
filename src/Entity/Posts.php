@@ -1,5 +1,12 @@
 <?php
 
+/*     Un usuario puede escribir muchos posts. Cada post solo puede estar escrito por un usuario, aunque este puede escribir muchos => OneToMany 
+    Para crear las relaciones, ejecutamos el cmd php bin/console make:entity User. Como cada usuario puede tener muchos posts, se abre la entidad usuario y va a hacer algunas preguntas : 
+     - El nombre del campo que se va a insertar (posts)   - OneTomMany  - COn que entidad está relacionado : Post  
+     - Dentro de Post cómo se va a llamar : user   
+     - Puede ser nulo (un post no debe no tener usuario) No  
+     - Si desaparece el usuario, se borran los posts huérfanos ? : sí  */
+
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
