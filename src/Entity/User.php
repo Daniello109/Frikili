@@ -1,9 +1,16 @@
 <?php
 
-/*  Para crear esta entidad, se ejecuta en la consola el comando php bin/console make:entity
+/*  Para crear esta entidad, se ejecuta en la consola el comando php bin/console make:entity de manera general.
+    Para el caso particular de los users, se utiliza el mismo comando, pero cambiando user por entity. En la creación, la consola te pedirá :
+    - el campo con el que querrás acceder : en este caso, el email.
+    - si quieres hashear las contraseñas.
+    Si necesitas añadir más campos, solo hay que copiar la sintaxis que transforman los campos en BDD. (como está hecho en baneado)
+    Esto significa que las anotaciones que van entre /** no son comentarios, sino la sintaxis para decretar qué tipo de dato será en la base de datos. De esta forma, la entidad se transforma en tabla en la bDD
+    Para actualizar la base de datos, se puede usar el comando php bin/console doctrine:schema:update --force
+
+    
     Pregunta el nombre de la entidad que se quiere crear o modificar (User). Como la entidad existe, propone agregar campos nuevos : pregunta el tipo, longitud, si puede ser nulo y después propone otra agregación 
     Las anotaciones @ORM\Entity y @ORM\Id, @ORM\GeneratedValue, @ORM\Column se utilizan para mapear la clase User a una tabla de la base de datos y definir sus propiedades.
- 
 */
 
 
