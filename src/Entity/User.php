@@ -3,12 +3,7 @@
 /*  Para crear esta entidad, se ejecuta en la consola el comando php bin/console make:entity
     Pregunta el nombre de la entidad que se quiere crear o modificar (User). Como la entidad existe, propone agregar campos nuevos : pregunta el tipo, longitud, si puede ser nulo y después propone otra agregación 
     Las anotaciones @ORM\Entity y @ORM\Id, @ORM\GeneratedValue, @ORM\Column se utilizan para mapear la clase User a una tabla de la base de datos y definir sus propiedades.
-     Un usuario puede escribir muchos posts. Cada post solo puede estar escrito por un usuario, aunque este puede escribir muchos => OneToMany 
-    Para crear las relaciones, ejecutamos el cmd php bin/console make:entity User. Como cada usuario puede tener muchos posts, se abre la entidad usuario y va a hacer algunas preguntas : 
-     - El nombre del campo que se va a insertar (posts)   - OneTomMany  - COn que entidad está relacionado : Post  
-     - Dentro de Post cómo se va a llamar : user   
-     - Puede ser nulo (un post no debe no tener usuario) No  
-     - Si desaparece el usuario, se borran los posts huérfanos ? : sí
+ 
 */
 
 
